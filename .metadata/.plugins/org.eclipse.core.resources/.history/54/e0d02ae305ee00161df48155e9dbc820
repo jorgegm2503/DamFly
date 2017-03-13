@@ -1,0 +1,109 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Mascotas {
+		
+	static ArrayList<Mascota> Mascotas = new ArrayList<Mascota>();
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        leerMascota();
+        System.out.println("\nCoches introducidos:");
+        mostrarMascota();
+        mostrarPorRaza();
+        mostrarPorEdad();
+        System.out.println("\nMacota con mayor número años: " + mostrarMenorEdad());
+        System.out.println("\nMascota ordenados de menor a mayor número de años");
+        mostrarOrdenadosPorEdad();
+    }
+   
+
+public static void leerMascota(){
+
+        String nombre;
+        int edad;
+        String raza;
+
+        Mascotas aux;
+        int i, N;
+
+        do {
+            System.out.print("Número de coches? ");
+            N = sc.nextInt();
+        } while (N < 0);
+        sc.nextLine(); //limpiar el intro
+        //lectura de N coches
+        for (i = 1; i <= N; i++) {
+            //leer datos de cada coche
+            System.out.println("Mascota " + i);
+            
+            System.out.print("Edad: ");
+            edad = sc.nextInt();
+            sc.nextLine();
+            System.out.print("Raza: ");
+            raza = sc.nextLine();
+            
+            Mascota.setNombre(nombre);
+            Mascota.setEdad(edad);
+            Mascota.setRaza(raza);
+                      
+           
+            Mascotas.add(aux);
+        }
+    } 
+
+  
+public static void mostrarMascota(){      
+    for(int i = 0; i< Mascotas.size(); i++)
+        System.out.println(Mascotas.get(i));  
+}
+
+
+public static void mostrarPorRaza(){
+    String marca;
+    System.out.print("Introduce la raza: ");
+    marca = sc.nextLine();
+    System.out.println("Mascotas de la raza " + marca);
+    for(int i = 0; i<Mascotas.size(); i++){
+        if(Mascotas.get(i).getRaza().equalsIgnoreCase(marca))
+            System.out.println(Mascotas.get(i));
+    }
+}
+
+
+public static void mostrarPorEdad(){
+    int edad;
+    System.out.print("Introduce la edad: ");
+    edad = sc.nextInt();
+    System.out.println("Mascotas con menos de " + edad + " años");
+    for(int i = 0; i<Mascotas.size(); i++){
+        if(Mascotas.get(i).getEdad() < edad)
+            System.out.println(Mascotas.get(i));
+    }
+}
+
+
+public static Mascotas mostrarMenorEdad(){
+    Mascota mayor = Mascotas.get(0);
+    for(int i = 0; i < Mascotas.size(); i++){
+        if(Mascotas.get(i).getEdad() < mayor.getEdad())
+            mayor = Mascotas.get(i);
+    }
+    return null;
+}
+
+
+
+public static void mostrarOrdenadosPorEdad(){
+    int i, j;
+    Mascota aux;
+    for(i = 0; i< Mascotas.size()-1; i++)
+        for(j=0;j<Mascotas.size()-i-1; j++)
+            if(Mascotas.get(j+1).getEdad() < Mascotas.get(j).getEdad()){
+                aux = Mascotas.get(j+1);
+                Mascotas.set(j+1, Mascotas.get(j));
+                Mascotas.set(j, aux);                
+            }
+    mostrarMascota();
+	}
+}

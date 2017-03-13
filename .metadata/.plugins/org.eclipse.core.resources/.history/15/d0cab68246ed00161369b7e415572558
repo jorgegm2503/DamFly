@@ -1,0 +1,43 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Mascota {
+		
+	Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		
+		Mascota datosMascota = new Mascota();
+		
+		datosMascota.nombreMascota();
+		datosMascota.edadMascota();
+		datosMascota.razaMascota();
+
+	}
+	
+	public void nombreMascota(){
+		
+		ArrayList<String>nombreMascota=new ArrayList<String>();
+		nombreMascota.add("Firualis");
+		nombreMascota.add("Rambo");
+		
+		System.out.println(nombreMascota);
+		
+	}
+	public void edadMascota(){
+		
+		ArrayList<Integer>edadMascota=new ArrayList<Integer>();
+		edadMascota.add(4);
+		edadMascota.add(6);
+	}
+	
+	public void razaMascota(){
+		
+		ArrayList<String>razaMascota=new ArrayList<String>();
+		razaMascota.add("Dalmata");
+		razaMascota.add("Pitbull");
+		System.out.println(razaMascota);
+		
+	}
+	
+}

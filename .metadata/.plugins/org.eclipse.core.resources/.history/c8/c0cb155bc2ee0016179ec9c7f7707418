@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class NotaMedia {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Introduce las 3 notas");
+		int nota1=sc.nextInt();
+		int nota1=sc.nextInt();
+		int nota1=sc.nextInt();
+		
+		
+	}
+
+}

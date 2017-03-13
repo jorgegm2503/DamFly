@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Mascota {
+		
+	
+	public static void main(String[] args) {
+		
+		Mascota datosMascota = new Mascota();
+		ArrayList<String>nombreMascota=new ArrayList<String>();
+		ArrayList<Integer>edadMascota=new ArrayList<Integer>();
+		ArrayList<String>razaMascota=new ArrayList<String>();
+
+		nombreMascota.add("Firualis");
+		
+		System.out.println(nombreMascota);
+	}
+
+}

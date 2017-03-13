@@ -1,0 +1,14 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Mascota {
+		
+	
+	public static void main(String[] args) {
+		
+		Mascota datosMascota = new Mascota();
+		ArrayList<Integer>nombreMascota;
+
+	}
+
+}

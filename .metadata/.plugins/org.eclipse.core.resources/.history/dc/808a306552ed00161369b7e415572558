@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Mascotas {
+		
+	Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		ArrayList<Mascota>listaMascotas=new ArrayList<Mascota>();
+		
+	}
+	
+	public ArrayList<Mascota> pideDatos(){
+		System.out.println("Introduce el nombre de la mascota:");
+		String nombre=sc.nextLine();
+		System.out.println("Introduce la edad de la mascota:");
+		int edad=sc.nextInt();
+		sc.nextLine();
+		System.out.println("Introduce la raza de la mascota:");
+		String raza=sc.nextLine();
+
+		
+	}
+	
+}
